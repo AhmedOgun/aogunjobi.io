@@ -1,2 +1,2 @@
 # aogunjobi.io
-Resume website 
+Check out my website! :  
