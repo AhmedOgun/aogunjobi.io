@@ -11,6 +11,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <style>
+    .no-bullets {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .no-bullets li {
+      margin-bottom: 10px;
+    }
+
+    .no-bullets p {
+      margin: 0;
+    }
+
+    .no-bullets .links {
+      margin-top: 5px;
+    }
+  </style>
 </head>
 
 <body>
@@ -96,6 +114,16 @@
                     <a href="">Code & Data</a>
                   </td>
                 </tr>
+                <tr class="paper" data-highlight="true">
+                  <td style="padding:10px 20px 10px 10px;width:75%;vertical-align:middle">
+                    <papertitle>Data driven prediction of High Refractive Index Polymers</papertitle>
+                    <br>
+                    Ahmed Ogunjobi, Robert Hill, Mark A. Wistey, Alam Korshed
+                    <br>
+                    <a href="">Blog Post</a> &nbsp/&nbsp
+                    <a href="">Code & Data</a>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -109,26 +137,22 @@
               </tr>
               <tr>
                 <td style="text-align:left;padding-left:10px;">
-                  <ul>
+                  <ul class="no-bullets">
                     <li>
                       <p><b>Materials Polymer Discovery Suite:</b> Consisted of a materials library generator, Materials DB, & ML for discovery of new materials. Used for data-driven discovery of polyimides and oxides.</p>
-                      <p><a href="">Blog Post</a> &nbsp/&nbsp <a href="">Code</a></p>
+                      <div class="links"><a href="">Blog Post</a> &nbsp/&nbsp <a href="">Code</a></div>
                     </li>
                     <li>
                       <p><b>Oxides Model:</b> Made a large dataset of photovoltaic oxides, trained in ML model, filtered & performed DFT calculations.</p>
-                      <p><a href="">Blog Post</a> &nbsp/&nbsp <a href="">Code</a></p>
-                    </li>
-                    <li>
-                      <p><b>Data Driven Prediction of High Refractive Polymers:</b> Data mining, ML, molecular dynamics, & DFT to discover new polyimides with HRI.</p>
-                      <p><a href="">Blog Post</a> &nbsp/&nbsp <a href="">Code</a></p>
+                      <div class="links"><a href="">Blog Post</a> &nbsp/&nbsp <a href="">Code</a></div>
                     </li>
                     <li>
                       <p><b>Lab Hardware Projects:</b> Feedforward flux transient device, touchscreen turbopump controller, power outage notification system, gas leak detection device.</p>
-                      <p><a href="">Blog Post</a> &nbsp/&nbsp <a href="">Code</a></p>
+                      <div class="links"><a href="">Blog Post</a> &nbsp/&nbsp <a href="">Code</a></div>
                     </li>
                     <li>
                       <p><b>Connect 4 AI Bot:</b> Player plays a game against a neural network written in C++ on CycloneV DE1-SoC.</p>
-                      <p><a href="">Blog Post</a> &nbsp/&nbsp <a href="">Code</a></p>
+                      <div class="links"><a href="">Blog Post</a> &nbsp/&nbsp <a href="">Code</a></div>
                     </li>
                   </ul>
                 </td>
@@ -162,3 +186,4 @@
 </body>
 
 </html>
+
