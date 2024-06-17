@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <base target="_blank">
+
+  <title>Ahmed Ogunjobi</title>
+
+  <meta name="author" content="Ahmed Ogunjobi">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+
+<body>
+  <table style="width:100%;max-width:1000px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr style="padding:10px">
+                <td style="padding:1%;width:60%;vertical-align:middle">
+                  <p style="text-align:center;margin-bottom:1.3em">
+                    <name>Ahmed Ogunjobi</name>
+                  </p>
+
+                  <p>
+                    Hello, my name is Ahmed Ogunjobi and welcome to my page. I graduated with a degree in electrical engineering
+                    (Computer Engineering concentration) and minors in Computer Science and Applied Mathematics
+                    from Texas State University. Please select one of the options below to see any projects, papers,
+                    or code that may be of interest to you.
+                  </p>
+
+                  <p style="text-align:center;margin-bottom:0em;margin-top:1em">
+                    <a href="https://github.com/AhmedOgun">Github</a> &nbsp/&nbsp
+                    <a href="https://www.linkedin.com/in/ahmed-ogunjobi-a5724622b">LinkedIn</a> &nbsp/&nbsp
+                    <a href="https://github.com/AhmedOgun/your-repository-name/blob/main/your-resume.pdf" target="_blank">Resume</a> &nbsp/&nbsp
+                  </p>
+                  <p style="text-align:center;margin-top:0.2em"> Email: aoo14_at_txstate_dot_edu </p>
+                </td>
+
+                <td style="padding-top:2%;padding-left:3%;width:30%;max-width:30%">
+                  <img style="width:95%;max-width:95%;border-radius:20%" alt="profile photo" src="assets/sunset_pic_crop.jpeg" class="hoverZoomLink">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:0px 0px 10px 10px;width:100%;vertical-align:middle">
+                  <heading>Research</heading>
+                </td>
+              </tr>
+              <tr>
+                <td style="text-align:left;padding-left:10px;">
+                  <style>
+                    .selectedButton {
+                      background-color: #4CAF50; /* Green */
+                      color: white;
+                    }
+                  </style>
+                  <button id="allButton" onclick="filterPapers('all'); highlightButton('allButton')">All</button>
+                  <button id="highlightsButton" class="selectedButton" onclick="filterPapers('highlights'); highlightButton('highlightsButton')">Highlights</button>
+                  <script>
+                    function highlightButton(buttonId) {
+                      document.getElementById('allButton').classList.remove('selectedButton');
+                      document.getElementById('highlightsButton').classList.remove('selectedButton');
+                      document.getElementById(buttonId).classList.add('selectedButton');
+                    }
+                    document.addEventListener('DOMContentLoaded', function() {
+                      highlightButton('highlightsButton');
+                      filterPapers('highlights');
+                    }, false);
+                  </script>
+                </td>
+              </tr>
+
+          <div id="papersList">
+            <script>
+              function boldAuthorName() {
+                var papers = document.querySelectorAll('.paper');
+                papers.forEach(function(paper) {
+                  paper.innerHTML = paper.innerHTML.replace(/Ahmed Ogunjobi\*/g, '<b>Ahmed Ogunjobi*</b>');
+                  paper.innerHTML = paper.innerHTML.replace(/Ahmed Ogunjobi(?!\*)/g, '<b>Ahmed Ogunjobi</b>');
+                });
+              }
+              document.addEventListener('DOMContentLoaded', boldAuthorName);
+            </script>
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+              <tbody>
+                <tr class="paper" data-highlight="true">
+                  <td style="padding:10px 20px 10px 10px;width:75%;vertical-align:middle">
+                    <papertitle>Stable Growth of Germanium Alloys for On-chip Lasers</papertitle>
+                    <br>
+                    Ahmed Ogunjobi, Robert Hill, Mark A. Wistey, Alam Korshed
+                    <br>
+                    <a href="">Blog Post</a> &nbsp/&nbsp
+                    <a href="">Code & Data</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <script>
+            function filterPapers(filter) {
+              const papers = document.querySelectorAll('.paper');
+              papers.forEach(paper => {
+                switch(filter) {
+                  case 'all':
+                    paper.style.display = '';
+                    break;
+                  case 'highlights':
+                    if (paper.getAttribute('data-highlight') === 'true') {
+                      paper.style.display = '';
+                    } else {
+                      paper.style.display = 'none';
+                    }
+                    break;
+                }
+              });
+            }
+          </script>
+        </td>
+      </tr>
+  </table>
+</body>
+
+</html>
+
