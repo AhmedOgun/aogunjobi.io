@@ -79,19 +79,6 @@
               </tr>
               <tr>
                 <td style="text-align:left;padding-left:10px;">
-                  <button id="allButton" onclick="filterPapers('all'); highlightButton('allButton')">All</button>
-                  <button id="highlightsButton" class="selectedButton" onclick="filterPapers('highlights'); highlightButton('highlightsButton')">Highlights</button>
-                  <script>
-                    function highlightButton(buttonId) {
-                      document.getElementById('allButton').classList.remove('selectedButton');
-                      document.getElementById('highlightsButton').classList.remove('selectedButton');
-                      document.getElementById(buttonId).classList.add('selectedButton');
-                    }
-                    document.addEventListener('DOMContentLoaded', function() {
-                      highlightButton('highlightsButton');
-                      filterPapers('highlights');
-                    }, false);
-                  </script>
                 </td>
               </tr>
 
