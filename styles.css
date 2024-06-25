@@ -1,5 +1,5 @@
 body {
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: 'Roboto Mono', monospace, sans-serif;
   background-color: #fff;
   color: #000;
   margin: 0;
@@ -15,12 +15,14 @@ body {
 .banner {
   position: relative;
   width: 100%;
-  height: auto;
+  height: 20vh; /* 1/5th of the viewport height */
+  overflow: hidden; /* To ensure content stays within the banner */
 }
 
 .banner img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
 }
 
 .overlay {
@@ -120,3 +122,4 @@ body {
     max-width: 90%;
   }
 }
+
