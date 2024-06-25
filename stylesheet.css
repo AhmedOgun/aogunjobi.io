@@ -73,6 +73,8 @@ body {
 
 .no-bullets li {
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .no-bullets p {
@@ -81,6 +83,14 @@ body {
 
 .no-bullets .links {
   margin-top: 5px;
+}
+
+.paper-image,
+.project-image {
+  width: 150px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 10%;
 }
 
 .section-gap {
@@ -95,25 +105,9 @@ body {
   font-weight: bold;
 }
 
-.project {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.project img {
-  width: 150px;
-  height: auto;
-  margin-right: 20px;
-  border-radius: 10%;
-}
-
-.project-info {
-  flex: 1;
-}
-
 @media (max-width: 768px) {
-  .project img {
+  .paper-image,
+  .project-image {
     display: none;
   }
 
